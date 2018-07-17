@@ -12,11 +12,10 @@ module.exports.httpcaller = function() {
         
         resp.on('end', () => {
             let forecastData = JSON.parse(data).SiteRep.DV.Location.Period;
-            moment().format()
             let result = [];
             forecastData.forEach(item => {
                 let forecastItem = {}
-                forecastItem.date = moment(item.value).format('YYYY-MM-DD');
+                forecastItem.date = moment(new Date(item.value)).format('YYYY-MM-DD');
                 let temperatures = [];
                 item.Rep.forEach(forecastElement => {
                     temperatures.push(parseInt(forecastElement['T']));

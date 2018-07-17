@@ -6,5 +6,8 @@ const {httpcaller} = require('./modules/httpcaller');
 
 module.exports.hello = (event, context, callback) => {
     let response = responseBuilder();
-    httpcaller().then(response => callback(null, response)).catch(err => callback(null, err));
+    httpcaller().then(res => {
+        response.body = res;
+        return callback(null, response);
+    }).catch(err => callback(null, err));
 };
