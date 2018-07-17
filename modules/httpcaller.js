@@ -15,7 +15,7 @@ module.exports.httpcaller = function() {
             let result = [];
             forecastData.forEach(item => {
                 let forecastItem = {}
-                forecastItem.date = moment(new Date(item.value)).format('YYYY-MM-DD');
+                forecastItem.date = moment(new Date(item.value)).format('dddd YYYY-MM-DD');
                 let temperatures = [];
                 item.Rep.forEach(forecastElement => {
                     temperatures.push(parseInt(forecastElement['T']));
