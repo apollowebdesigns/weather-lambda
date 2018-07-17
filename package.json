@@ -1,0 +1,19 @@
+{
+  "name": "forecast-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint-plugin-node": "^7.0.1",
+    "moment": "^2.22.2"
+  }
+}
